@@ -1,6 +1,5 @@
 package com.qascript;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,13 +25,13 @@ public class FirstTest {
 	
     @Test
     public void OpenBrowser()  {
-    	System.setProperty("webdriver.gecko.driver", ".\\Drivers\\geckodriver.exe");
-    	WebDriver driver = new FirefoxDriver();
-    	String url = "https://nxtgenaiacademy.com";
-    	driver.get(url);
-    	driver.manage().window().maximize();
-    	System.out.println("Driver Launched Successfully");
-    	driver.close();
+    	
+    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+    	WebDriver driver = new ChromeDriver();
+		driver.get("https:www.google.com");
+		driver.manage().window().maximize();
+		driver.close();
+    
     }
 
 
