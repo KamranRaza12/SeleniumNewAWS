@@ -26,7 +26,7 @@ public class FirstTest {
     @Test
     public void OpenBrowser()  {
     	
-    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+    	System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
     	WebDriver driver = new ChromeDriver();
 		driver.get("https:www.google.com");
 		driver.manage().window().maximize();
