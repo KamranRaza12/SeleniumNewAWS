@@ -19,6 +19,7 @@ public class FirstTest {
         driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
+        System.out.println("My name is Kamran");
 		driver.close();
     
     }
