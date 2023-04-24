@@ -20,6 +20,7 @@ public class FirstTest {
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
         System.out.print("New Updates to be printed on console");
+        System.out.println("Build check 24-04-2023");
 		driver.close();
     
     }
