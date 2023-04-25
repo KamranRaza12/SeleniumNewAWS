@@ -22,7 +22,6 @@ public class FirstTest {
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
         System.out.println("New Updates to be printed on console");
-
         System.out.println("TestCase 1");
         
 		driver.close();
