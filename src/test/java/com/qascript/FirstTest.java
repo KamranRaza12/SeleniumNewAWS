@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class FirstTest {
 
 
-  /* @Test
+  @Test
     public void OpenBrowser()  {
     	WebDriver driver;
     	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -25,9 +25,9 @@ public class FirstTest {
         
 		driver.close();
     
-    }*/
+    }
     
-
+/*
     @Test
     public void OpenBrowserNew()  {
     	//WebDriver driver;
@@ -44,7 +44,7 @@ public class FirstTest {
         
 		//driver.close();
     
-    }
+    }*/
 }
 
 
