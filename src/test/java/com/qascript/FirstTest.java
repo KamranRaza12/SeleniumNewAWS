@@ -14,12 +14,12 @@ public class FirstTest {
     public void OpenBrowser()  {
     	WebDriver driver;
     	
-    	String chromeDriverPath = System.getenv("CHROMEDRIVER_PATH");
-    	System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+    	//String chromeDriverPath = System.getenv("CHROMEDRIVER_PATH");
+    	//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
     	//driver = new ChromeDriver();
 
     	
-    	//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("disable-gpu");
