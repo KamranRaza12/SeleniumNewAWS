@@ -1,17 +1,16 @@
 version: 0.2
+
 phases:
-  
-pre_build:
-  commands:
-    - echo Nothing to do in the pre_build phase...
-    - apt-get install missing-package
-build:
-  commands:
-    - echo Build started on `date`
-    - mvn install
-post_build:
-  commands:
-    - echo Build completed on `date`
-artifacts:
-  files:
-    - target/messageUtil-1.0.jar
+  install:
+    runtime-versions:
+      java: openjdk11
+    commands:
+      - apt-get update
+      - apt-get install -y maven chromium-browser
+      - export CHROMEDRIVER_PATH=/usr/lib/chromium-browser/chromedriver
+  pre_build:
+    commands:
+      - mvn clean
+  build:
+    commands:
+      - mvn test
