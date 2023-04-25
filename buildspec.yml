@@ -3,17 +3,23 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corretto11
+      docker: 18
     commands:
-      # Install Chrome and Chromedriver
-      - curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
-      - echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-      - apt-get update && apt-get install -y google-chrome-stable
-      - wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv chromedriver /usr/bin/
-      # Install Maven
-      - apt-get install -y maven
- 
+      - echo Entered the install phase...
+      - apt-get update
+      - apt-get install -y google-chrome-stable
+      - LATEST_CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
+      - curl -sS -o chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+      - unzip chromedriver_linux64.zip
+      - chmod +x chromedriver
+      - mv chromedriver /usr/bin/chromedriver
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      # Compile and run the tests using Maven
+      - echo Entered the build phase...
+      - cd tests
       - mvn test
