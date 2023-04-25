@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 
 public class FirstTest {
@@ -14,8 +14,7 @@ public class FirstTest {
     public void OpenBrowser()  {
     	WebDriver driver;
     	
-    	//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromium-browser");
+    	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("disable-gpu");
