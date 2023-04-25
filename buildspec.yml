@@ -12,10 +12,7 @@ phases:
       - wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv chromedriver /usr/bin/
       # Install Maven
       - apt-get install -y maven
-  pre_build:
-    commands:
-      # Navigate to the project directory
-      - cd SeleniumNewAWS
+ 
   build:
     commands:
       # Compile and run the tests using Maven
