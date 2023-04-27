@@ -23,6 +23,7 @@ public class FirstTest {
         System.out.println("Title of the page is: " + driver.getTitle());
         System.out.println("New Updates to be printed on console");
         System.out.println("TestCase 1");
+        System.out.println("TESS2");
         
 		driver.close();
     
